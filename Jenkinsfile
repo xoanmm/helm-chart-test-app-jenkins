@@ -1,5 +1,7 @@
 pipeline {
-  agent 'helm'
+  agent {
+    label 'helm'
+  }
   stages {
     stage('Helm') {
       steps {
