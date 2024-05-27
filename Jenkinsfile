@@ -7,6 +7,7 @@ pipeline {
       steps {
         container('helm') {
           sh 'helm template test-app'
+          sh 'helm package test-app/ --destination package/'
         }
       }
     }
